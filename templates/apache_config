@@ -24,7 +24,7 @@ MEFrefuse all
 
 # MEFaccept 1.2.3.4  1.2.3.5 
 # these proxies areset by puppet using the variable $reverse_proxies
-MEFaccept <%= $reverse_proxies %>
+MEFaccept <%= reverse_proxies %>
 
 # Normal mode of use is to say:
 #
