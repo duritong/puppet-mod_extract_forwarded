@@ -6,7 +6,7 @@
 # reverse proxy addresses.
 # In the configuration the variable
 #  $reverse_proxies
-# is used.
+# is used. It is expected to be an array.
 class mod_extract_forwarded {
     include mod_extract_forwarded::base
 }
@@ -18,6 +18,6 @@ class mod_extract_forwarded::base {
     }
 
     apache::config::file{'mod_extract_forwarded.conf':
-        content => template('mod_extract_forwarded/apache_config'),
+        content => template('mod_extract_forwarded/apache_config.erb'),
     }
 }
